@@ -58,7 +58,7 @@ def sample_user():
 
 
 # simulated user will ignore recommendations after this slot index (reward = 0)
-ignore_after_index = 5
+ignore_after_index = 2
 
 
 def simulate_reward(
