@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 
 seed = random.randint(0, 100000)
 
-m = pyvw.vw(f"--ccb_explore_adf  --cover 5 --random_seed {seed}")
+m = pyvw.vw(f"--ccb_explore_adf  --cover 5 -q :: --random_seed {seed}")
 
 
 # We will choose 1 of two users at random for each round with equal probability.
