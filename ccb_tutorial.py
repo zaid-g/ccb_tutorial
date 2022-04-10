@@ -248,7 +248,9 @@ rolling_round_regrets_random_policy = np.convolve(
     round_regrets_random_policy, np.ones(roll) / roll, mode="valid"
 )
 print(np.mean(round_regrets_ccb))
-plt.plot(list(range(len(rolling_round_regrets_ccb))), rolling_round_regrets_ccb)
+plt.plot(
+    list(range(len(rolling_round_regrets_ccb))), rolling_round_regrets_ccb, label="ccb"
+)
 plt.plot(
     list(range(len(rolling_round_regrets_random_policy))),
     rolling_round_regrets_random_policy,
@@ -257,7 +259,6 @@ plt.plot(
 plt.plot(
     list(range(len(rolling_round_regrets_ccb))),
     [0] * len(rolling_round_regrets_ccb),
-    label="ccb",
 )
 plt.xlabel("round")
 plt.ylabel(f"rolling average regret (N={roll})")
